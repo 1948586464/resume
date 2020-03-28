@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>简历</title>
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.easing.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/single-0.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#main>p").hide();
+				$("#main").bind("click",function(){
+					$("#main>p").slideDown("slow");
+				});
+			});
+		</script>
+		<style type="text/css">
+			body{background-color: lightgrey;}
+			#main{
+				width: 100%;
+				height: 635px;
+			}
+			#main p{
+				position: absolute;
+				top: 100px;
+				left: 25%;
+				font-size: 100px;
+				color: dimgray;
+			}
+			#about{
+				position: absolute;
+				top: 635px;
+				left: 0;
+				width: 100%;
+				height: -10px;
+				background-color: lightgray;
+			}
+			#about .head{
+				position: absolute;
+				top: 640px;
+				left: 10px;
+				background-color: darkslategray;
+				width: 100%;
+				height: 60px;
+			}
+			#about .head p{
+				position: absolute;
+				left: 600px;
+				top: -14px;
+				width: 330px;
+				color: white;
+			}
+			#about .head span{
+				position: absolute;
+				top: 10px;
+				color: red;
+				left: 80px;
+				float: left;
+				font-size: 28px;
+			}
+			#about .head .nav{
+				position: absolute;
+				top: -14px;
+				left: 800px;
+				width: 500px;
+				height: 40px;
+				display: inline;
+				list-style-type: none;
+			}
+			#about .head .nav ul li{
+				display: inline;
+				list-style-type: none;
+				float: left;
+				padding: 18px;
+				color: white;
+				text-decoration: none;
+			}
+			#about .head a{
+				display: inline-block;
+				float: left;
+				padding: 18px;
+				color: white;
+				text-decoration: none;
+			}
+			#about .head a:hover{
+				color: darkorange;
+			}
+			#about #pic{
+				position: absolute;
+				left: 550px;
+				top: 800px;
+				border-radius: 60px;
+			}
+			#about #artical{
+				position: absolute;
+				margin: auto;
+				left: 380px;
+				top: 1100px;
+				width: 600px;
+			}
+			#about #artical p{
+				text-indent: 2em;
+				font-size: 14px;
+				color: gray;
+				line-height: 20px;
+				text-align: justify;
+			}
+			#about #hr{
+				position: absolute;
+				top: 730px;
+				left: 630px;
+			}
+			#edu{
+				position: absolute;
+				top: 1400px;
+				left: 0;
+				width: 100%;
+				height: 635px;
+			}
+			#edu .head{
+				position: absolute;
+				top: 640px;
+				left: 10px;
+				background-color: darkslategray;
+				width: 100%;
+				height: 60px;
+			}
+			#edu .head p{
+				position: absolute;
+				left: 600px;
+				top: -14px;
+				width: 330px;
+				color: white;
+			}
+			#edu .head span{
+				position: absolute;
+				top: 10px;
+				color: red;
+				left: 80px;
+				float: left;
+				font-size: 28px;
+			}
+			#edu .head .nav{
+				position: absolute;
+				top: -14px;
+				left: 800px;
+				width: 500px;
+				height: 40px;
+				display: inline;
+				list-style-type: none;
+			}
+			#edu .head .nav ul li{
+				display: inline;
+				list-style-type: none;
+				float: left;
+				padding: 18px;
+				color: white;
+				text-decoration: none;
+			}
+			#edu .head a{
+				display: inline-block;
+				float: left;
+				padding: 18px;
+				color: white;
+				text-decoration: none;
+			}
+			#edu .head a:hover{
+				color: darkorange;
+			}
+			#edu #hr-1{
+				position: absolute;
+				left: 630px;
+				top: 740px;
+			}
+			#edu #edu-content{
+				position: absolute;
+				left: 380px;
+				top: 900px;
+				width: 600px;
+				padding-top: 200px;
+			}
+			#edu #edu-content p{
+				text-indent: 2em;
+				font-size: 14px;
+				color: gray;
+				line-height: 20px;
+				text-align: justify;
+			}
+			#edu #edu-pic{
+				position: absolute;
+				left: 160px;
+				top: -90px;
+				border-radius: 60px;
+			}
+			#job{
+				position: absolute;
+				top: 1800px;
+				left: 0;
+				width: 100%;
+				height: 635px;
+			}
+			#job .head{
+				position: absolute;
+				top: 1000px;
+				left: 10px;
+				background-color: darkslategray;
+				width: 100%;
+				height: 60px;
+			}
+			#job .head p{
+				position: absolute;
+				left: 600px;
+				top: -14px;
+				width: 330px;
+				color: white;
+			}
+			#job .head span{
+				position: absolute;
+				top: 10px;
+				color: red;
+				left: 80px;
+				float: left;
+				font-size: 28px;
+			}
+			#job .head .nav{
+				position: absolute;
+				top: -14px;
+				left: 800px;
+				width: 500px;
+				height: 40px;
+				display: inline;
+				list-style-type: none;
+			}
+			#job .head .nav ul li{
+				display: inline;
+				list-style-type: none;
+				float: left;
+				padding: 18px;
+				color: white;
+				text-decoration: none;
+			}
+			#job .head a{
+				display: inline-block;
+				float: left;
+				padding: 18px;
+				color: white;
+				text-decoration: none;
+			}
+			#job .head a:hover{
+				color: darkorange;
+			}
+			#job #job-pic{
+				position: relative;
+				left: 170px;
+				margin-bottom: 55px;
+			}
+			#job #hr-2{
+				position: absolute;
+				left: 635px;
+				top: 1100px;
+			}
+			#job #job-content{
+				position: absolute;
+				left: 380px;
+				top: 1000px;
+				width: 600px;
+				padding-top: 200px;
+			}
+			#job #job-content p{
+				text-indent: 2em;
+				font-size: 14px;
+				color: gray;
+				line-height: 20px;
+				text-align: justify;
+			}
+			#contact{
+				position: absolute;
+				top: 3000px;
+				left: 0;
+				width: 100%;
+				height: 635px;
+			}
+			#contact .head{
+				position: absolute;
+				top: 1000px;
+				left: 10px;
+				background-color: darkslategray;
+				width: 100%;
+				height: 60px;
+			}
+			#contact .head p{
+				position: absolute;
+				left: 600px;
+				top: -14px;
+				width: 330px;
+				color: white;
+			}
+			#contact .head span{
+				position: absolute;
+				top: 10px;
+				color: red;
+				left: 80px;
+				float: left;
+				font-size: 28px;
+			}
+			#contact .head .nav{
+				position: absolute;
+				top: -14px;
+				left: 800px;
+				width: 500px;
+				height: 40px;
+				display: inline;
+				list-style-type: none;
+			}
+			#contact .head .nav ul li{
+				display: inline;
+				list-style-type: none;
+				float: left;
+				padding: 18px;
+				color: white;
+				text-decoration: none;
+			}
+			#contact .head a{
+				display: inline-block;
+				float: left;
+				padding: 18px;
+				color: white;
+				text-decoration: none;
+			}
+			#contact .head a:hover{
+				color: darkorange;
+			}
+			#contact #contact-pic{
+				position: relative;
+				left: 170px;
+				margin-bottom: 55px;
+			}
+			#contact #hr-3{
+				position: absolute;
+				left: 635px;
+				top: 1100px;
+			}
+			#contact #contact-content{
+				position: absolute;
+				left: 380px;
+				top: 1000px;
+				width: 600px;
+				padding-top: 200px;
+			}
+			#contact #contact-content p{
+				text-indent: 2em;
+				font-size: 14px;
+				color: gray;
+				line-height: 20px;
+				text-align: justify;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<p>你好,我是陈可钊</p>
+		</div>
+		<div id="about">
+			<div class="head">
+				<span style="color: white;">陈可钊</span>
+				<ul class="nav">
+					<li><a href="#信息">信息</a></li>
+					<li><a href="#">教育经历</a></li>
+					<li><a href="#">工作经历</a></li>
+					<li><a href="#">联系方式</a></li>
+				</ul>
+			</div>
+			<div id="hr">
+		        <strong style="text-align: right;">信&nbsp;&nbsp;&nbsp;&nbsp;息</strong>
+				<hr color="darkgoldenrod" width="50px"/>
+			</div>
+				<div id="pic">
+					<img src="img/about.jpg" />
+				</div>
+				<div id="artical">
+				<p>
+					我来自重庆，毕业于重庆理工大学。
+					我的性格偏于内向，为人坦率、热情、讲求原则；处事乐观、专心；富有责任心、乐于助人。 </p>
+					<p>我还是一个正直忠诚、勤奋求实的人，会不断追求人格的自我完善；明显的特点是乐观自信、温和开朗、稳重宽厚，因此，我人际关系和谐，适应环境能力较强。爱好电脑、科普知识，喜欢钻研，正因为这些增强了我的实干精神，习惯事情或问题及早解决
+				</p>
+				</div>
+		</div>
+		<div id="edu">
+			<div class="head">
+				<span style="color: white;">陈可钊</span>
+				<ul class="nav">
+					<li><a href="#">信息</a></li>
+					<li><a href="#">教育经历</a></li>
+					<li><a href="#">工作经历</a></li>
+					<li><a href="#">联系方式</a></li>
+				</ul>
+			</div>
+			<div id="hr-1">
+			    <strong>教育经历</strong>
+				<hr color="darkgoldenrod" width="50px"/>
+			</div>
+			<div id="edu-content">
+				<div id="edu-pic">
+					<img src="./img/p3.png" />
+				</div>
+				<div>
+				<p>2018.05-2018.07</p>
+				<p>
+					进入成都云创科技有限公司培训，学习过javaSE、html、css、JavaScript、jQuery，自学过Vue的基础特性、指令、过渡和组件
+				</p>
+				<hr />
+				<p>
+					2014.09-2018.06
+				</p>
+				<p>
+					重庆理工大学,就读社会工作专业。本专业培养具有基本的社会工作理论和知识，
+					较熟练的社会调查研究技能和社会工作能力，能在民政、劳动、杜会保障和卫生部门，
+					及工会、青年、妇女等社会组织及其他社会福利、服务和公益团体等机构从事社会保障、
+					社会政策研究、社会行政管理、社区发展与管理、社会服务、评估与操作等工作的高级专门人才。
+				</p>
+				</div>
+			</div>
+		</div>
+		<div id="job">
+			<div class="head">
+				<span style="color: white;">陈可钊</span>
+				<ul class="nav">
+					<li><a href="#">信息</a></li>
+					<li><a href="#">教育经历</a></li>
+					<li><a href="#">工作经历</a></li>
+					<li><a href="#">联系方式</a></li>
+				</ul>
+			</div>
+			<div id="hr-2">
+			    <strong>工作经历</strong>
+				<hr color="darkgoldenrod" width="50px"/>
+			</div>
+			<div id="job-content">
+				<div id="job-pic">
+					<img src="./img/post-img3.jpg" />
+				</div>
+				<div id="job-neirong">
+				<p>2019.03-2020.01</p>
+				<p>
+					进入重庆硕拓电子商务有限公司,从事微信客服工作。
+				</p>
+				<hr />
+				<p>
+					2018.09-2018.12
+				</p>
+				<p>
+					在重庆一家私立教育机构从事托管教师工作,主要工作内容是为机构内的小学生辅导课内外作业。
+				</p>
+				</div>
+			</div>
+		</div>
+		<div id="contact">
+			<div class="head">
+				<span style="color: white;">陈可钊</span>
+				<ul class="nav">
+					<li><a href="#">信息</a></li>
+					<li><a href="#">教育经历</a></li>
+					<li><a href="#">工作经历</a></li>
+					<li><a href="#">联系方式</a></li>
+				</ul>
+			</div>
+			<div id="hr-3">
+			    <strong>联系方式</strong>
+				<hr color="darkgoldenrod" width="50px"/>
+			</div>
+			<div id="contact-content">
+				<div id="contact-pic">
+					<img src="./img/pic4.jpg" />
+				</div>
+				<div id="contact-neirong">
+				<p>手机号码 : 13996241365</p>
+				<hr />
+				<p>QQ : 1948586464</p>
+				<hr />
+				<p>微信 : 18723735890</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
